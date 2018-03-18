@@ -1,0 +1,13 @@
+/**
+ * Changes the sign of a 16-bit integer:
+ * out = - in
+ */
+
+ CHIP Negate16 {
+    IN in[16];
+    OUT out[16];
+
+    PARTS:
+      Not16(in=in, out=notIn);
+      Inc16(in=notIn, out=out);
+}
